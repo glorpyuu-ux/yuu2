@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CYD Chess Flasher</title>
+<script type="module" src="https://unpkg.com/esp-web-tools@10.0.1/dist/web/install-button.js?module"></script>
+<style>
+  :root { color-scheme: dark; }
+  body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
+         background:#262421; color:#eee; font-family:system-ui,Segoe UI,Roboto,sans-serif; }
+  .card { max-width:460px; padding:32px; text-align:center; }
+  h1 { margin:0 0 4px; color:#769656; letter-spacing:1px; }
+  p  { color:#bbb; line-height:1.5; }
+  button { font-size:20px; font-weight:700; padding:16px 34px; border:0; border-radius:10px;
+           background:#769656; color:#fff; cursor:pointer; margin:18px 0; }
+  button:hover { background:#86a666; }
+  ol { text-align:left; color:#bbb; line-height:1.7; }
+  .warn { color:#e6a23c; font-size:14px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>CYD CHESS</h1>
+  <p>Flash chess onto your ESP32-2432S028</p>
+  <esp-web-install-button manifest="manifest.json">
+    <button slot="activate">CONNECT &amp; FLASH</button>
+    <span slot="unsupported" class="warn">This browser can't talk to serial ports. Use Chrome or Edge on a desktop.</span>
+    <span slot="not-allowed" class="warn">Serial access needs https or localhost. Start this page with flash.bat / flash.py.</span>
+  </esp-web-install-button>
+  <ol>
+    <li>Plug the CYD in with a USB <b>data</b> cable.</li>
+    <li>Press <b>Connect &amp; Flash</b> and pick the CYD's serial port (CH340 / USB Serial).</li>
+    <li>Tick <b>Erase device</b> to wipe the flash first, then press <b>Install</b>.</li>
+  </ol>
+  <p class="warn">If it can't connect, hold the BOOT button on the CYD while pressing Install.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "CYD Chess",
+  "version": "1.0",
+  "new_install_prompt_erase": true,
+  "builds": [
+    {
+      "chipFamily": "ESP32",
+      "parts": [ { "path": "firmware/cyd-chess-merged.bin", "offset": 0 } ]
+    }
+  ]
+}
